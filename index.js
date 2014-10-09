@@ -78,7 +78,7 @@ function resolveConfig(config) {
 
 function loadGruntParentTasks(grunt, options) {
   var log = function() {
-    grunt.log.writeln(['[loadGruntParentTasks]'.magenta].concat(Array.prototype.slice.call(arguments)).join(' '));
+    grunt.verbose.writeln(['[loadGruntParentTasks]'.magenta].concat(Array.prototype.slice.call(arguments)).join(' '));
   };
 
   options = options || {};
@@ -129,8 +129,10 @@ function loadGruntParentTasks(grunt, options) {
       scripts: {}
     }, deps);
 
+    log('Writing: ' + ('' + gruntCollectionJson).cyan);
     grunt.file.mkdir(gruntCollection);
     grunt.file.write(gruntCollectionJson, JSON.stringify(newPkg, null, 2));
+    log('loadNpmTasks: ' + 'grunt-collection'.cyan);
     grunt.loadNpmTasks('grunt-collection');
   }
 }
