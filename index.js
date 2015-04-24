@@ -118,7 +118,7 @@ function loadGruntParentTasks(grunt, options) {
     // globbing pattern and scope.
     globule.match(pattern, names).map(function(name) {
       scope.forEach(function (prop) {
-        if (config[prop][name]) {
+        if (config[prop] && config[prop][name]) {
           deps[prop][name] = config[prop][name];
         }
       });
