@@ -1,12 +1,18 @@
 {
   "name": "load-grunt-parent-tasks",
   "description": "Loads de-duped grunt tasks from parent or sibling modules.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/psyrendust/load-grunt-parent-tasks",
   "author": {
     "name": "Larry Gordon",
     "email": "lgordon@psyrendust.com"
   },
+  "contributors": [
+    {
+      "name": "Francisco Cortés",
+      "email": "franklyn.bdn@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/psyrendust/load-grunt-parent-tasks.git"
