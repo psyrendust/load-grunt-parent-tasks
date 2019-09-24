@@ -1,0 +1,27 @@
+{
+    "extends": [
+        "tslint:recommended"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**/*.ts"
+        ]
+    },
+    "rules": {
+        "quotemark": [
+            true,
+            "single",
+            "avoid-escape"
+        ],
+        "semicolon": [
+            true,
+            "always"
+        ],
+        "indent": [
+            true,
+            "spaces"
+        ],
+        "interface-name": false,
+        "trailing-comma": false
+    }
+}
