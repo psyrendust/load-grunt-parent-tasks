@@ -98,4 +98,4 @@ function loadGruntParentTasks(grunt: IGrunt, options: PassedOptions = {}) {
     }
 }
 
-module.exports = loadGruntParentTasks;
+export default loadGruntParentTasks;
