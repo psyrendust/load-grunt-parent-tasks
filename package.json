@@ -7,6 +7,8 @@
     "name": "Larry Gordon",
     "email": "lgordon@psyrendust.com"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "contributors": [
     {
       "name": "Francisco Cortés",
