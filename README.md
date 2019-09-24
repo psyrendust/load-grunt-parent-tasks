@@ -1,6 +1,6 @@
 # load-grunt-parent-tasks
 
-> Loads de-duped grunt tasks from parent or sibling modules.
+> Loads de-duped grunt tasks from parent or sibling modules, or for hoisted monorepos.
 
 ## TL;DR
 
@@ -25,7 +25,7 @@ look like this:
     │   │   ├── Gruntfile.js
     │   │   ├── node_modules
     │   │   │   └── Z
-    │   │   └── package.json (has depencencies X,Y,Z)
+    │   │   └── package.json (has dependencies X,Y,Z)
     │   ├── X
     │   └── Y
     └── package.json (has dependencies A,X,Y)
@@ -49,7 +49,7 @@ a new module which contains project A's package.json with the addition of a
     │   │   │   ├── grunt-collection
     │   │   │   │   └── package.json (has dependencies X,Y,Z and 'keywords: ["gruntcollection"]')
     │   │   │   └── Z
-    │   │   └── package.json (has depencencies X,Y,Z)
+    │   │   └── package.json (has dependencies X,Y,Z)
     │   ├── X
     │   └── Y
     └── package.json (has dependencies A,X,Y)
@@ -149,6 +149,14 @@ Type: `String`
 Default: `'grunt-collection'`
 
 The `module` option can be changed in case `grunt-collection` ever conflicts with any other package name.
+
+### alwaysCreate
+
+Type: `boolean`  
+Default: `'false'`
+
+Will create the fake package in node_modules even if the cwd is root (this should be set if
+you want to hoist grunt tasks in a monorepo)
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).

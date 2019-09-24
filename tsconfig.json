@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": "src",
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "target": "es5",
+        "module": "commonjs",
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "isolatedModules": false,
+        "allowJs": false,
+        "noEmit": false
+    }
+}
